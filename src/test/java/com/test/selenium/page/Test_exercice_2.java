@@ -1,6 +1,10 @@
 package com.test.selenium.page;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,18 +17,23 @@ public class Test_exercice_2
 
 {
 	         BrowserControl bc;
-	         String productNamePanier,quantite,prix_unitaire,total;
+	         String productNamePanier,quantite,prix_unitaire,total,strProductName;
 	         
 	         
 	         @FindBy(id=("makeup"))
 				private WebElement  btn_MenuMakup;
 	         
-	         @FindBy(xpath=("//*[@id=\"main-navigation\"]/ul[2]/li[3]/div/div/div[2]/div[4]/div[2]/ul/li[1]/a"))
-				private WebElement  btn_MenuMakupLipstick;
+	         @FindBy(xpath=("//a[@data-linkname='Lipstick']"))
+			 private WebElement  btn_MenuMakupLipstick;
 	         
+	       
 	         
-			@FindBy(xpath=("//*[@id=\"main\"]/div[3]/div[3]/div/div[2]/div[1]/div[1]/article/div[2]/div[2]/div[2]/button[2]"))
-			private WebElement  btn_AjouterProduitAuPanier;
+	         @FindBy(xpath="//div[@data-position-mobile]/article/div[2]/div[1]/p/a/span[2]")
+	 	     private   List<WebElement>list_lipstickt;
+	         
+			//@FindBy(xpath=("//*[@id=\"main\"]/div[3]/div[3]/div/div[2]/div[1]/div[1]/article/div[2]/div[2]/div[2]/button[2]"))
+	         @FindBy(xpath=("//div[@data-position-mobile='0']/article/div[2]/div[2]/div[2]/button[2]"))
+			 private WebElement  btn_AjouterProduitAuPanier;
 	
 			
 			@FindBy(xpath=("/html/body/div[15]/div/div[3]/div[1]/div[6]/form/ul/li/p/button"))
@@ -83,6 +92,11 @@ public class Test_exercice_2
 			 */
 		 	public void clickbtnMenuMakupLipstick()
 		 	{
+				/*
+				 * Actions builder = new Actions(bc.getDriver());
+				 * builder.moveToElement(btn_MenuMakupLipstick).click(btn_MenuMakupLipstick);
+				 * builder.perform();
+				 */
 		 		this.btn_MenuMakupLipstick.click();
 		 	}
 			
@@ -173,5 +187,31 @@ public class Test_exercice_2
 							return total.replaceAll("\\s+","");
 							  
 						  }
-			
+						   
+						  
+						  	/**
+							 * Cette fonction permet de parcourir la liste des lipstick et de cliquer sur rouge allure
+						 	 * @return 
+							 *
+							 */
+								 	public  void  clickAddPanier(String nomProduit)
+								 	
+								 	 {	
+								 		 for (WebElement ele:list_lipstickt)
+								 		 { 
+								 			 
+										     strProductName = ele.getText().toUpperCase();
+										
+										     if(strProductName.equals(nomProduit))
+										     { 
+										    	 this.clickBtnAjouterProduitAuPanier();
+										    	 break;
+										     }
+										     	 
+										     
+								 	    }
+								 	   
+								 	    	
+										
+								}
 }

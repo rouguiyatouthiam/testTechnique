@@ -59,9 +59,10 @@ public class ExerciceTestCase {
 		test_exercice_1.clickBarreRecherche();
 		test_exercice_1.setMotRechercher(motRechercher);
 		test_exercice_1.clickBoutonRecherche();
-		 //bc.waitSomeTime(3000);
+		bc.waitSomeTime(2000);
 		test_exercice_1.btnCloseSearcPage();
 		test_exercice_1.clickBarreRechercheBis();
+		bc.waitSomeTime(3000);
 		System.out.println(test_exercice_1.getReccentSearch());
 		Assert.assertEquals(test_exercice_1.getReccentSearch(),motRechercher);
 		test_exercice_1.clickReccentSearch();
@@ -74,7 +75,8 @@ public class ExerciceTestCase {
 		  
 		  bc.waitSomeTime(3000);
 		  
-		  NomProduit2DeLaListe =test_exercice_1.getProdui2tNameListProduct(); test_exercice_1.clickProduitDeuxListe();
+		  NomProduit2DeLaListe =test_exercice_1.getProdui2tNameListProduct();
+		  test_exercice_1.clickProduitDeuxListe();
 		  NomProduitPageProduit=test_exercice_1.getProdui2tNamepageProduct();
 		  Assert.assertEquals(NomProduitPageProduit,NomProduit2DeLaListe);
 		  System.out.println("nom produit liste te page produit conformes");
@@ -86,14 +88,16 @@ public class ExerciceTestCase {
 	  @Test(description = "Ce test traite l'exercie 2", dependsOnMethods =  "accueil") 
 	  public void exercice_2(String quantite,String nomProduit) 
 	  {
-	  test_exercice_2 = new Test_exercice_2(this.bc); bc.waitSomeTime(3000);
-	  test_exercice_2. clickbtnMenuMakup(); bc.waitSomeTime(3000); test_exercice_2.
-	  clickbtnMenuMakupLipstick(); bc.waitSomeTime(3000); 
+	  test_exercice_2 = new Test_exercice_2(this.bc); 
+	  test_exercice_2. clickbtnMenuMakup();  
+	  test_exercice_2. clickbtnMenuMakupLipstick(); 
+	  bc.waitSomeTime(3000);
 	  //scroller vers le ba  pour voir les produits
 	  JavascriptExecutor Js1 = (JavascriptExecutor)  this.bc.getDriver(); 
 	  Js1.executeScript("window.scrollBy(0,1000)");
 	  
-	  test_exercice_2. clickBtnAjouterProduitAuPanier(); 
+	  test_exercice_2.clickAddPanier(nomProduit);
+	  //test_exercice_2. clickBtnAjouterProduitAuPanier(); 
 	  test_exercice_2. clickAjouterAuPanier(); 
 	  bc.waitSomeTime(8000);
 	  test_exercice_2. clickbtnbtnAfficherPanier(); 

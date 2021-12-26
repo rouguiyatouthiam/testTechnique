@@ -37,20 +37,21 @@ public class Test_exercice_1
 	   //@FindBy(xpath=" //*[@id=\"new-search-overlay\"]/div/div[1]/div[2]/div/div[1]/div[2]/button[2]")
 		private WebElement  btn_rechercher;
 	   
+	   //div[@class='product-list-inline']
 	    @FindBy(xpath="//div[@class='product-list-inline']/div[2]/a/h4/span")
 	    private   List<WebElement>list_product;
 	   
 	    
-//	    /bookstore/book[position()<3]
+	    //bookstore/book[position()<3]
 	   //  @FindBy(xpath="//*[@id=\"new-search-overlay\"]/div/div[2]/div[2]/div/div[2]/div/div[2]/div[3]/div[2]/a")
-	    @FindBy(xpath="//*[@id=\"new-search-overlay\"]/div/div[2]/div[2]/div/div[2]/div/div[2]/div[3]/div[2]/a")
+	    @FindBy(xpath="//div[@class='product-list-inline'][2]/div[2]/a")
 		private WebElement  produit_2_listProduit;
 	    
 	    
-	    @FindBy(xpath="//*[@id=\"new-search-overlay\"]/div/div[2]/div[2]/div/div[2]/div/div[2]/div[3]/div[2]/a/h4/span")
+	    @FindBy(xpath="//div[@class='product-list-inline'][2]/div[2]/a/h4/span")
 		private WebElement  ProduitNameListProduct;
 	    
-	    @FindBy(xpath="//*[@id=\"main\"]/div[3]/div[1]/div/div/div[3]/div/div/div/h1/span[1]")
+	    @FindBy(xpath="//span[@data-test='lblProductTitle']")
 		private WebElement  ProduitNamePageProduct;
 	    
 	    
