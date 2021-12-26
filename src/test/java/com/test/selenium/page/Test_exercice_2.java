@@ -205,6 +205,7 @@ public class Test_exercice_2
 										     if(strProductName.equals(nomProduit))
 										     { 
 										    	 this.clickBtnAjouterProduitAuPanier();
+										    	 System.out.println();
 										    	 break;
 										     }
 										     	 
