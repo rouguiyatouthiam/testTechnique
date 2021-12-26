@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite parallel="none" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <parameter name="navigateur" value="chrome"/>
+  <parameter name="nomProduit" value="ROUGE ALLURE"/>
+  <parameter name="motRcherche" value="ROUGE ALLURE"/>
+  <parameter name="quantite" value="1"/>
+  <test parallel="none" name="Test(failed)">
+    <classes>
+      <class name="com.test.selenium.testCase.ExerciceTestCase">
+        <methods>
+          <include name="accueil"/>
+          <include name="exercice_1" invocation-numbers="0"/>
+          <include name="browserClose"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- com.test.selenium.testCase.ExerciceTestCase -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
