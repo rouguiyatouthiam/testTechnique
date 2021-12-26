@@ -36,26 +36,26 @@ public class Test_exercice_2
 			 private WebElement  btn_AjouterProduitAuPanier;
 	
 			
-			@FindBy(xpath=("/html/body/div[15]/div/div[3]/div[1]/div[6]/form/ul/li/p/button"))
+			@FindBy(xpath=("//*[@data-test='btnAddtocart_StickBar']"))
 			private WebElement  btn_AjouterAuPanier;
 			
 			
-			@FindBy(xpath=("/html/body/div[15]/div/div[3]/div[4]/div/a"))
+			@FindBy(xpath=("//*[@data-test='btnReviewBag']"))
 			private WebElement  btn_AfficherPanier;
 	
 			
-			@FindBy(xpath=( "//*[@id=\"151167\"]/span[1]"))
+			@FindBy(xpath=( "//a[@data-test='secProductName_0']/span[1]"))
 			private WebElement  productName;
 			
 		
 			
-			@FindBy(xpath=( "//*[@id=\"prd0\"]/option[1]" ))
+			@FindBy(xpath=( "//*[@id='prd0']/option[1]" ))
 			private WebElement  quantite_panier;
 			
-			@FindBy(xpath=("//*[@id=\"updateCartForm0\"]/div[1]/div[2]/div/p" ))
+			@FindBy(xpath=("//*[@data-test='lblPrice_orderSummary']" ))
 			private WebElement  prixUnitaire_panier;
 			
-			@FindBy(xpath=("//*[@id=\"main\"]/div[3]/div/div/div/div[2]/div/table/tbody/tr[4]/td" ))
+			@FindBy(xpath=("//*[@data-test='lblTotalPrice_CartOverview']" ))
 			private WebElement  total_panier;
 	
 	   /**
@@ -92,11 +92,7 @@ public class Test_exercice_2
 			 */
 		 	public void clickbtnMenuMakupLipstick()
 		 	{
-				/*
-				 * Actions builder = new Actions(bc.getDriver());
-				 * builder.moveToElement(btn_MenuMakupLipstick).click(btn_MenuMakupLipstick);
-				 * builder.perform();
-				 */
+				
 		 		this.btn_MenuMakupLipstick.click();
 		 	}
 			

@@ -79,7 +79,7 @@ public class ExerciceTestCase {
 		  test_exercice_1.clickProduitDeuxListe();
 		  NomProduitPageProduit=test_exercice_1.getProdui2tNamepageProduct();
 		  Assert.assertEquals(NomProduitPageProduit,NomProduit2DeLaListe);
-		  System.out.println("nom produit liste te page produit conformes");
+		  System.out.println("nom produitpage produit et de la  liste produit conformes");
 		 
 			 
 	}
