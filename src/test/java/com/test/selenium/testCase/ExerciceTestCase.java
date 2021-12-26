@@ -62,7 +62,7 @@ public class ExerciceTestCase {
 		bc.waitSomeTime(2000);
 		test_exercice_1.btnCloseSearcPage();
 		test_exercice_1.clickBarreRechercheBis();
-		bc.waitSomeTime(3000);
+		bc.waitSomeTime(5000);
 		System.out.println(test_exercice_1.getReccentSearch());
 		Assert.assertEquals(test_exercice_1.getReccentSearch(),motRechercher);
 		test_exercice_1.clickReccentSearch();
