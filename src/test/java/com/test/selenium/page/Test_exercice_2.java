@@ -36,11 +36,11 @@ public class Test_exercice_2
 			 private WebElement  btn_AjouterProduitAuPanier;
 	
 			
-			@FindBy(xpath=("//*[@data-test='btnAddtocart_StickBar']"))
+			@FindBy(xpath=("//button[@data-test='btnAddtocart_StickBar']"))
 			private WebElement  btn_AjouterAuPanier;
 			
 			
-			@FindBy(xpath=("//*[@data-test='btnReviewBag']"))
+			@FindBy(xpath=("//a[@data-test='btnReviewBag']"))
 			private WebElement  btn_AfficherPanier;
 	
 			
@@ -49,13 +49,13 @@ public class Test_exercice_2
 			
 		
 			
-			@FindBy(xpath=( "//*[@id='prd0']/option[1]" ))
+			@FindBy(xpath=( "//select[@id='prd0']/option[1]" ))
 			private WebElement  quantite_panier;
 			
-			@FindBy(xpath=("//*[@data-test='lblPrice_orderSummary']" ))
+			@FindBy(xpath=("//div[@data-test='lblPrice_orderSummary']" ))
 			private WebElement  prixUnitaire_panier;
 			
-			@FindBy(xpath=("//*[@data-test='lblTotalPrice_CartOverview']" ))
+			@FindBy(xpath=("//td[@data-test='lblTotalPrice_CartOverview']" ))
 			private WebElement  total_panier;
 	
 	   /**
