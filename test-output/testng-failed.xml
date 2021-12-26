@@ -11,6 +11,7 @@
         <methods>
           <include name="accueil"/>
           <include name="exercice_1" invocation-numbers="0"/>
+          <include name="exercice_2" invocation-numbers="0"/>
           <include name="browserClose"/>
           <include name="setup"/>
         </methods>
